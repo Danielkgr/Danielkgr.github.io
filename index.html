@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daniel Glynn-Roe</title>
+<meta name="description" content="Lawyer in Melbourne who builds AI systems for legal work, and the measurement that decides whether a model can be trusted with it.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Daniel Glynn-Roe">
+<meta property="og:description" content="AI systems for legal work, and the measurement that decides whether a model can be trusted with it.">
+<meta property="og:url" content="https://danielkgr.github.io/">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230969da'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3EDG%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #ffffff;
+    --surface: #f6f8fa;
+    --border: #d0d7de;
+    --text: #1f2328;
+    --muted: #59636e;
+    --accent: #0969da;
+    --green: #1a7f37;
+    --green-bg: #dafbe1;
+    --amber: #9a6700;
+    --amber-bg: #fff8c5;
+    --grey: #59636e;
+    --grey-bg: #eaeef2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d1117;
+      --surface: #151b23;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #9198a1;
+      --accent: #4493f8;
+      --green: #3fb950;
+      --green-bg: #0f2a19;
+      --amber: #d29922;
+      --amber-bg: #2b2210;
+      --grey: #9198a1;
+      --grey-bg: #21262d;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 72px 0 40px; border-bottom: 1px solid var(--border); }
+  h1 { font-size: 2.6rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .role { color: var(--muted); font-size: 1.15rem; margin: 0 0 22px; }
+  .lede { font-size: 1.3rem; line-height: 1.5; margin: 0 0 26px; max-width: 34em; }
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .links a {
+    display: inline-block; padding: 7px 14px; border: 1px solid var(--border); border-radius: 999px;
+    text-decoration: none; font-weight: 600; font-size: 0.95rem; color: var(--text); background: var(--surface);
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+  section { padding: 48px 0 8px; }
+  h2 { font-size: 1.5rem; margin: 0 0 18px; letter-spacing: -0.01em; }
+  .thesis {
+    margin: 0; padding: 18px 22px; border-left: 4px solid var(--accent); background: var(--surface);
+    border-radius: 0 10px 10px 0; font-size: 1.1rem;
+  }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .card {
+    border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; background: var(--bg);
+    display: flex; flex-direction: column;
+  }
+  .card h3 { font-size: 1.12rem; margin: 0 0 8px; }
+  .card p { margin: 0 0 12px; }
+  .card .where { margin-top: auto; font-size: 0.93rem; color: var(--muted); }
+  .projects { display: grid; gap: 18px; }
+  .project { border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+  .project h3 { font-size: 1.25rem; margin: 0 0 4px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .project h3 a { text-decoration: none; }
+  .project h3 a:hover { text-decoration: underline; }
+  .project p { margin: 8px 0; }
+  .status { font-size: 0.93rem; color: var(--muted); }
+  .pill {
+    font-size: 0.78rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+  .pill.green { color: var(--green); background: var(--green-bg); }
+  .pill.amber { color: var(--amber); background: var(--amber-bg); }
+  .pill.grey { color: var(--grey); background: var(--grey-bg); }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 0; padding: 0; list-style: none; }
+  .tags li { font-size: 0.8rem; padding: 2px 9px; border-radius: 6px; background: var(--surface); border: 1px solid var(--border); color: var(--muted); }
+  .method { margin: 0; padding: 0; list-style: none; display: grid; gap: 14px; }
+  .method li { padding-left: 18px; border-left: 3px solid var(--border); }
+  .method strong { display: block; }
+  footer { margin: 56px 0 0; padding: 28px 0 48px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.93rem; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    header { padding: 44px 0 28px; }
+    h1 { font-size: 2rem; }
+    .lede { font-size: 1.12rem; }
+    .project { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Daniel Glynn-Roe</h1>
+  <p class="role">Lawyer and tinkerer in Melbourne</p>
+  <p class="lede">I build AI systems for legal work, and the measurement that decides whether a model can be trusted with it.</p>
+  <ul class="links">
+    <li><a href="https://github.com/Danielkgr">GitHub</a></li>
+    <li><a href="#work">Selected work</a></li>
+    <li><a href="#method">How I work</a></li>
+  </ul>
+</header>
+
+<main>
+
+<section aria-labelledby="why">
+  <h2 id="why">Why measurement comes first</h2>
+  <p class="thesis">Most AI writing reports the systems that work.  In legal practice the work that matters is the distance between a model that sounds authoritative and a model that is correct.  That gap is where the risk sits, and it has to be measured rather than assumed.</p>
+</section>
+
+<section aria-labelledby="questions">
+  <h2 id="questions">Three questions a firm has to answer</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Is it accurate enough?</h3>
+      <p>Measured on the firm's own kind of work, not on a vendor's leaderboard.  A model that invents a case is worse than one that admits a gap.</p>
+      <p class="where">See <a href="https://github.com/Danielkgr/auslawexam-bench">auslawexam-bench</a> and <a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a></p>
+    </div>
+    <div class="card">
+      <h3>Where does client material go?</h3>
+      <p>Confidential and privileged material either leaves for a provider's servers or stays on hardware the firm controls.  Both are defensible, and the choice should be deliberate.</p>
+      <p class="where">See <a href="https://github.com/Danielkgr/local-llm-inference-notes">local-llm-inference-notes</a> and <a href="https://github.com/Danielkgr/intake-agent">intake-agent</a></p>
+    </div>
+    <div class="card">
+      <h3>What does each answer cost?</h3>
+      <p>Cost per task, read from every response, decides whether a tool scales from a pilot to a practice group.  Restructuring one prompt cut a full run from 1,560 calls to 130.</p>
+      <p class="where">See <a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> and <a href="https://github.com/Danielkgr/intake-agent">intake-agent</a></p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="work" id="work">
+  <h2>Selected work</h2>
+  <div class="projects">
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/intake-agent">intake-agent</a> <span class="pill amber">Working prototype</span></h3>
+      <p>A Claude agent that triages a new client enquiry.  It checks conflicts through a tool, applies the firm's intake policy, and drafts a practitioner summary and a holding reply that gives no advice.  The conflict check, the routing rules, and an advice check on the reply run in code, so every doubtful case goes to a person.</p>
+      <p class="status">Tested against a mocked API, with a deterministic evaluation of 30 synthetic enquiries and an offline rules baseline.  The Claude arm has not yet been run against the live API.</p>
+      <ul class="tags"><li>Claude API</li><li>tool use</li><li>structured outputs</li><li>prompt caching</li><li>Python</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/auslawexam-bench">auslawexam-bench</a> <span class="pill amber">Working prototype</span></h3>
+      <p>A reproducible benchmark of Australian legal reasoning for language models.  Its headline metric is how often a model invents a citation, which is the exposure a law firm actually carries.</p>
+      <p class="status">16 provisional questions, with every authority in the answer key checked against public sources.  The Claude, GPT, and Gemini slots are wired and tested against mocked APIs, and one real run of a local open-weight model is committed with its raw outputs.  <a href="https://danielkgr.github.io/auslawexam-bench/">View the leaderboard</a>.</p>
+      <ul class="tags"><li>evaluation</li><li>citation checking</li><li>FastAPI</li><li>React</li><li>Python</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> <span class="pill grey">Built, not yet measured</span></h3>
+      <p>A zero-shot language model against a fine-tuned transformer on CUAD contract clauses, compared on precision, recall, F1, cost, and latency, and framed as a build-or-buy decision.</p>
+      <p class="status">The Claude arm asks about every clause type in one call per chunk, which cuts a full test run from 1,560 calls to 130.  No comparison run has been published yet.</p>
+      <ul class="tags"><li>Claude API</li><li>transformers</li><li>CUAD</li><li>Python</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/legislation-monitor">legislation-monitor</a> <span class="pill amber">Working prototype</span></h3>
+      <p>Change detection over Commonwealth and Victorian legislation.  It fetches each Act on request, diffs it against the last version, and has Claude or a local model write a plain-English brief of the amendment, labelled with where the brief came from.</p>
+      <p class="status">113 tests and CI on every push.  It has not yet been checked against the live registers.</p>
+      <ul class="tags"><li>Claude API</li><li>Next.js</li><li>TypeScript</li><li>SQLite</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/legal-rag-evaluation">legal-rag-evaluation</a> <span class="pill amber">Working prototype</span></h3>
+      <p>Hybrid retrieval over Australian statute.  Claude answers with citations to the exact sections it retrieved, and a checker flags any section reference the retrieved text does not support.</p>
+      <p class="status">One earlier two-Act run is committed with its provenance.  A provisional 36-question Fair Work Act set is ready to run at section level.</p>
+      <ul class="tags"><li>Claude API</li><li>citations</li><li>retrieval</li><li>Python</li></ul>
+    </article>
+
+    <article class="project">
+      <h3><a href="https://github.com/Danielkgr/local-llm-inference-notes">local-llm-inference-notes</a> <span class="pill green">Published</span></h3>
+      <p>Sixteen measurement investigations from one workstation, eight of them negative, with a plain-English summary of what running models locally means for client confidentiality.  The method the rest of the work leans on.</p>
+      <p class="status">Published, with the written method and the five tools that enforce it, tested in CI.</p>
+      <ul class="tags"><li>measurement</li><li>local inference</li><li>llama.cpp</li><li>Python</li></ul>
+    </article>
+
+  </div>
+</section>
+
+<section aria-labelledby="method" id="method">
+  <h2>How I work</h2>
+  <ul class="method">
+    <li><strong>Criteria before results.</strong>Noise bands and success criteria are declared before a run.  A band chosen after seeing the numbers is a rationalisation.  The rules are written down in <a href="https://github.com/Danielkgr/local-llm-inference-notes/blob/HEAD/METHOD.md">METHOD.md</a>.</li>
+    <li><strong>Negative results get published.</strong>Eight of the sixteen inference investigations end in no, and several of them overturned a claim the repository had already made.</li>
+    <li><strong>Every number traces to a commit.</strong>Each benchmark, prompt, and published result lives in version control, next to the code and the run that produced it.  Linters and tests run in CI on every push.</li>
+    <li><strong>Unmeasured means unclaimed.</strong>Where something has not been run, the project says so plainly, and the command to run it sits beside the claim.</li>
+    <li><strong>Fixes go upstream.</strong>A crash fix for GGUF tensors was <a href="https://github.com/molbal/ComfyUI-GGUF/pull/12">merged into molbal/ComfyUI-GGUF</a> the night it was reported.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Every project on this page is public on <a href="https://github.com/Danielkgr">GitHub</a>, with its tests, its method, and what it has not yet measured.
+</footer>
+
+</div>
+</body>
+</html>
