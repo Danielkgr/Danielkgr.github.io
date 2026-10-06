@@ -155,21 +155,21 @@
     <article class="project">
       <h3><a href="https://github.com/Danielkgr/intake-agent">intake-agent</a> <span class="pill amber">Working prototype</span></h3>
       <p>A Claude agent that triages a new client enquiry.  It checks conflicts through a tool, applies the firm's intake policy, and drafts a practitioner summary and a holding reply that gives no advice.  The conflict check, the routing rules, and an advice check on the reply run in code, so every doubtful case goes to a person.</p>
-      <p class="status">Tested against a mocked API, with a deterministic evaluation of 30 synthetic enquiries and an offline rules baseline.  The Claude arm has not yet been run against the live API.</p>
+      <p class="status">Run once against the live Claude API on 30 synthetic enquiries, with every model turn, tool call, and cost in the audit trail.  It scored 30 of 30 on every field for $0.90, but an offline keyword baseline also scores 30 of 30, so the set is too easy to separate them.</p>
       <ul class="tags"><li>Claude API</li><li>tool use</li><li>structured outputs</li><li>prompt caching</li><li>Python</li></ul>
     </article>
 
     <article class="project">
       <h3><a href="https://github.com/Danielkgr/auslawexam-bench">auslawexam-bench</a> <span class="pill amber">Working prototype</span></h3>
       <p>A reproducible benchmark of Australian legal reasoning for language models.  Its headline metric is how often a model invents a citation, which is the exposure a law firm actually carries.</p>
-      <p class="status">16 provisional questions, with every authority in the answer key checked against public sources.  The Claude, GPT, and Gemini slots are wired and tested against mocked APIs, and one real run of a local open-weight model is committed with its raw outputs.  <a href="https://danielkgr.github.io/auslawexam-bench/">View the leaderboard</a>.</p>
+      <p class="status">16 provisional questions, with every authority in the answer key checked against public sources.  Two real runs are committed with their raw outputs, Claude Opus 5.5 on the live API and a local open-weight model.  Their fabricated-citation rates are upper bounds until a legal review, because the checker's corpus is small.  <a href="https://danielkgr.github.io/auslawexam-bench/">View the leaderboard</a>.</p>
       <ul class="tags"><li>evaluation</li><li>citation checking</li><li>FastAPI</li><li>React</li><li>Python</li></ul>
     </article>
 
     <article class="project">
-      <h3><a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> <span class="pill grey">Built, not yet measured</span></h3>
+      <h3><a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> <span class="pill amber">Working prototype</span></h3>
       <p>A zero-shot language model against a fine-tuned transformer on CUAD contract clauses, compared on precision, recall, F1, cost, and latency, and framed as a build-or-buy decision.</p>
-      <p class="status">The Claude arm asks about every clause type in one call per chunk, which cuts a full test run from 1,560 calls to 130.  No comparison run has been published yet.</p>
+      <p class="status">The zero-shot Claude arm has been run on the 56 CUAD test contracts, for a macro F1 of 0.818 at $3.35, asking about every clause type in one call per chunk.  The fine-tuned arm has not been run, so the comparison is still open.</p>
       <ul class="tags"><li>Claude API</li><li>transformers</li><li>CUAD</li><li>Python</li></ul>
     </article>
 
