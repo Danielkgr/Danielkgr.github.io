@@ -167,9 +167,9 @@
     </article>
 
     <article class="project">
-      <h3><a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> <span class="pill amber">Working prototype</span></h3>
+      <h3><a href="https://github.com/Danielkgr/contract-clause-classifier">contract-clause-classifier</a> <span class="pill green">Published</span></h3>
       <p>A zero-shot language model against a fine-tuned transformer on CUAD contract clauses, compared on precision, recall, F1, cost, and latency, and framed as a build-or-buy decision.</p>
-      <p class="status">The zero-shot Claude arm has been run on the 56 CUAD test contracts, for a macro F1 of 0.818 at $3.35, asking about every clause type in one call per chunk.  The fine-tuned arm has not been run, so the comparison is still open.</p>
+      <p class="status">Both arms are measured on the 56 CUAD test contracts.  Zero-shot Claude reached a macro F1 of 0.818 at six cents a contract.  A fine-tuned RoBERTa reached 0.736, twelve times faster on a local GPU, with no contract text leaving the machine.</p>
       <ul class="tags"><li>Claude API</li><li>transformers</li><li>CUAD</li><li>Python</li></ul>
     </article>
 
