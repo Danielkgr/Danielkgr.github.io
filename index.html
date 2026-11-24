@@ -197,7 +197,7 @@
 
     <article class="project">
       <h3><a href="https://github.com/Danielkgr/local-llm-inference-notes">local-llm-inference-notes</a> <span class="pill green">Published</span></h3>
-      <p>Sixteen measurement investigations from one workstation, eight of them negative, with a plain-English summary of what running models locally means for client confidentiality.  The method the rest of the work leans on.</p>
+      <p>Twenty measurement investigations across two machines, including rejected upgrades and a withdrawn claim, with a plain-English summary of what running models locally means for client confidentiality.  The method the rest of the work leans on.</p>
       <p class="status">Published, with the written method and the five tools that enforce it, tested in CI.</p>
       <ul class="tags"><li>measurement</li><li>local inference</li><li>llama.cpp</li><li>Python</li></ul>
     </article>
@@ -209,7 +209,7 @@
   <h2>How I work</h2>
   <ul class="method">
     <li><strong>Criteria before results.</strong>Noise bands and success criteria are declared before a run.  A band chosen after seeing the numbers is a rationalisation.  The rules are written down in <a href="https://github.com/Danielkgr/local-llm-inference-notes/blob/HEAD/METHOD.md">METHOD.md</a>.</li>
-    <li><strong>Negative results get published.</strong>Eight of the sixteen inference investigations end in no, and several of them overturned a claim the repository had already made.</li>
+    <li><strong>Negative results get published.</strong>The inference notes record six rejected engine updates, a speed claim I withdrew, and a deployed model that failed its full suite.</li>
     <li><strong>Every number traces to a commit.</strong>Each benchmark, prompt, and published result lives in version control, next to the code and the run that produced it.  Linters and tests run in CI on every push.</li>
     <li><strong>Unmeasured means unclaimed.</strong>Where something has not been run, the project says so plainly, and the command to run it sits beside the claim.</li>
     <li><strong>Fixes go upstream.</strong>A crash fix for GGUF tensors was <a href="https://github.com/molbal/ComfyUI-GGUF/pull/12">merged into molbal/ComfyUI-GGUF</a> the night it was reported.</li>
